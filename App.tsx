@@ -1,19 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'react-native';
 import { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
 import removeFalse from "./assets/removeFalse.png";
 import removeTrue from "./assets/removeTrue.png";
+import { Header } from './src/components/Header';
+import { Home } from './src/Home';
 export default function App() {
-  const [pressionar, setPressionar] = useState(false);
-  function handlePressionar(){
-    setPressionar(true);
-  }
-  function handleDespressionar(){
-    setPressionar(false);
-  }
+  
   return (
-    <View style={styles.container}>
-      <TouchableHighlight
+    <>
+      <View style={styles.container}>
+        <Header />
+        <Home />
+      </View>
+      <StatusBar 
+      barStyle={"light-content"}
+      backgroundColor="transparent"
+      translucent
+      />
+    </>
+   
+  );
+}
+/* 
+const [pressionar, setPressionar] = useState(false);
+  function handlePressionar(){
+    setPressionar(!pressionar);
+  }
+<TouchableHighlight
       onPress={() => console.log("Ola mundo")}
       style={styles.button} 
       onShowUnderlay={handlePressionar}
@@ -22,19 +36,11 @@ export default function App() {
           {
             pressionar ? <Image source={removeTrue}/> : <Image source={removeFalse}/>
           }
-      </TouchableHighlight>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
+      </TouchableHighlight> */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#1A1A1A',
   },
   button: {
     backgroundColor: '#333333',
