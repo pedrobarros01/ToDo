@@ -2,6 +2,7 @@ import React from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Contagem } from "../components/Contagem";
 import { Header } from "../components/Header";
+import { Tarefa } from "../components/Tarefas";
 import { styles } from "./styles";
 
 
@@ -25,6 +26,7 @@ export function Home(){
                 <Contagem ehCriada numero={0} />
                 <Contagem ehCriada={false} numero={0} />
             </View>
+            <Tarefa />
         </View>
     );
 }
