@@ -38,6 +38,13 @@ export const styles = StyleSheet.create({
         height: 100,
         justifyContent: 'space-between',
         paddingRight: 18
+    },
+    list: {
+        borderTopWidth: 1,
+        borderTopColor: '#333333',
+        width: '100%',
+        flex: 1,
+        paddingTop: 12
     }
     
 });
