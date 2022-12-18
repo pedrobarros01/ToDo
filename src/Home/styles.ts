@@ -30,7 +30,8 @@ export const styles = StyleSheet.create({
         borderRadius: 12,
         height: 56,
         marginRight: 12,
-        paddingLeft: 12
+        paddingLeft: 12,
+        color: '#F2F2F2'
     },
     contagemBox:{
         flexDirection: 'row',

@@ -15,5 +15,11 @@ export const styles = StyleSheet.create({
         width: '60%',
         fontSize: 12,
         color: '#F2F2F2'
+    },
+    button: {
+        height: 56,
+        width: 56,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
