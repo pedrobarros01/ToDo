@@ -36,7 +36,6 @@ export function Tarefa({tarefa, setCheck, handleDelete}: ITarefaProps ){
         <View style={styles.containerTask} >
             <TouchableHighlight
             onPress={handlePressionar} 
-            
             style={styles.button}
             >
                 { 

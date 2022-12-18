@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Alert, FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Contagem } from "../components/Contagem";
-import { Header } from "../components/Header";
 import { ListaVazia } from "../components/ListaVazia";
 import { Tarefa } from "../components/Tarefas";
 import { styles } from "./styles";
@@ -12,7 +11,6 @@ interface ITarefaType{
     check: boolean;
 }
 
-const array: number[] = [1, 2, 3, 4, 5, 6, 7, 8]
 export function Home(){
     const [listTarefas, setListTarefas] = useState<ITarefaType[]>([]);
     const [tarefaInfo, setTarefaInfo] = useState("");
@@ -31,7 +29,6 @@ export function Home(){
         const listaAux = [...listTarefas, objTarefa];
         setListTarefas(prevState => [...prevState, objTarefa]);
         setTarefaInfo("");
-        console.log(listaAux.length);
         setCountTarefas(listaAux.length);
     }
     function setCheck(check: boolean, tarefa: string){
